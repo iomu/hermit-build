@@ -4,23 +4,9 @@ export GOARCH ?= $(shell go env GOARCH)
 
 SUFFIX = $(GOOS)-$(GOARCH)
 
-UNVERSIONED_TOOLS = github.com/subfuzion/envtpl/cmd/envtpl@master \
-					golang.org/x/exp/cmd/apidiff@latest \
-					github.com/robertkrimen/godocdown/godocdown@latest \
-					golang.org/x/vuln/cmd/govulncheck@latest \
-					github.com/kisielk/godepgraph@latest \
-					github.com/brendanjryan/k8split@latest \
-					go.uber.org/nilaway/cmd/nilaway@latest
-TOOLS = github.com/deepmap/oapi-codegen/v2:cmd/oapi-codegen \
-	golang.org/x/tools:cmd/stringer \
-	golang.org/x/tools:cmd/goimports \
-	github.com/mailru/easyjson:easyjson \
-	github.com/dmarkham/enumer \
-	github.com/planetscale/vtprotobuf:cmd/protoc-gen-go-vtproto \
-	connectrpc.com/connect:cmd/protoc-gen-connect-go \
-	github.com/jfeliu007/goplantuml:cmd/goplantuml \
-	github.com/buildpacks/scafall \
-	braces.dev/errtrace:cmd/errtrace
+UNVERSIONED_TOOLS = 
+
+TOOLS = github.com/google/gnostic:cmd/protoc-gen-openapi
 
 all:
 	make GOOS=linux GOARCH=amd64 clean build
