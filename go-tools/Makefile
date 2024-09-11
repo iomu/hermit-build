@@ -6,7 +6,8 @@ SUFFIX = $(GOOS)-$(GOARCH)
 
 UNVERSIONED_TOOLS = 
 TOOLS = github.com/google/gnostic:cmd/protoc-gen-openapi \
-		github.com/freiheit-com/kuberpult/cli:cmd/kuberpult-client
+		github.com/freiheit-com/kuberpult/cli:cmd/kuberpult-client \
+		github.com/oapi-codegen/oapi-codegen/v2:cmd/oapi-codegen
 		
 
 all:
